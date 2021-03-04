@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController
 @Api(tags = ["Client controller"])
 @RestController
 @RequestMapping("/api/clients")
-class ClientsController(
+class ClientController(
     val registerClientUseCase: RegisterClientUseCase,
     val findClientsUseCase: FindClientsUseCase,
     val updateClientUseCase: UpdateClientUseCase,

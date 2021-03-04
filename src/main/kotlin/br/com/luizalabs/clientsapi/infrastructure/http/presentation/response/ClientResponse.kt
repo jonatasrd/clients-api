@@ -1,6 +1,6 @@
-package br.com.luizalabs.clients.infrastructure.http.presentation.response
+package br.com.luizalabs.clientsapi.infrastructure.http.presentation.response
 
-import br.com.luizalabs.clients.domain.Client
+import br.com.luizalabs.clientsapi.domain.Client
 import io.swagger.annotations.ApiModel
 
 /**

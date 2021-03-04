@@ -1,4 +1,4 @@
-package br.com.luizalabs.clients
+package br.com.luizalabs.clientsapi
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

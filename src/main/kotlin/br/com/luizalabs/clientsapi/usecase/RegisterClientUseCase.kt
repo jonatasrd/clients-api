@@ -1,6 +1,6 @@
-package br.com.luizalabs.clients.usecase
+package br.com.luizalabs.clientsapi.usecase
 
-import br.com.luizalabs.clients.domain.Client
+import br.com.luizalabs.clientsapi.domain.Client
 
 class RegisterClientUseCase {
 

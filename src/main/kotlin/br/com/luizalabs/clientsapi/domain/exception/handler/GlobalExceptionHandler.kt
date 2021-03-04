@@ -1,9 +1,9 @@
-package br.com.luizalabs.clients.domain.exception.handler
+package br.com.luizalabs.clientsapi.domain.exception.handler
 
-import br.com.luizalabs.clients.domain.exception.DataBaseInfrastructureException
-import br.com.luizalabs.clients.domain.exception.ResourceAlreadyExistsException
-import br.com.luizalabs.clients.domain.exception.ResourceNotFoundException
-import br.com.luizalabs.clients.domain.exception.model.ResponseError
+import br.com.luizalabs.clientsapi.domain.exception.DataBaseInfrastructureException
+import br.com.luizalabs.clientsapi.domain.exception.ResourceAlreadyExistsException
+import br.com.luizalabs.clientsapi.domain.exception.ResourceNotFoundException
+import br.com.luizalabs.clientsapi.domain.exception.model.ResponseError
 import org.hibernate.validator.internal.engine.path.PathImpl
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory

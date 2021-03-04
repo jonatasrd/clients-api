@@ -1,6 +1,6 @@
-package br.com.luizalabs.clients.domain.exception
+package br.com.luizalabs.clientsapi.domain.exception
 
-import br.com.luizalabs.clients.domain.exception.model.MessageError
+import br.com.luizalabs.clientsapi.domain.exception.model.MessageError
 
 /**
  * Exception for database errors

@@ -1,13 +1,13 @@
-package br.com.luizalabs.clients.infrastructure.http.routing
+package br.com.luizalabs.clientsapi.infrastructure.http.routing
 
-import br.com.luizalabs.clients.infrastructure.http.presentation.request.CreateClientRequest
-import br.com.luizalabs.clients.infrastructure.http.presentation.request.toDomain
-import br.com.luizalabs.clients.infrastructure.http.presentation.response.ClientResponse
-import br.com.luizalabs.clients.infrastructure.http.presentation.response.toResponse
-import br.com.luizalabs.clients.usecase.DeleteClientUseCase
-import br.com.luizalabs.clients.usecase.FindClientsUseCase
-import br.com.luizalabs.clients.usecase.RegisterClientUseCase
-import br.com.luizalabs.clients.usecase.UpdateClientUseCase
+import br.com.luizalabs.clientsapi.infrastructure.http.presentation.request.CreateClientRequest
+import br.com.luizalabs.clientsapi.infrastructure.http.presentation.request.toDomain
+import br.com.luizalabs.clientsapi.infrastructure.http.presentation.response.ClientResponse
+import br.com.luizalabs.clientsapi.infrastructure.http.presentation.response.toResponse
+import br.com.luizalabs.clientsapi.usecase.DeleteClientUseCase
+import br.com.luizalabs.clientsapi.usecase.FindClientsUseCase
+import br.com.luizalabs.clientsapi.usecase.RegisterClientUseCase
+import br.com.luizalabs.clientsapi.usecase.UpdateClientUseCase
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
 import io.swagger.annotations.ApiResponse

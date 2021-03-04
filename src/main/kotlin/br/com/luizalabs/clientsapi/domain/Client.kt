@@ -1,4 +1,4 @@
-package br.com.luizalabs.clients.domain
+package br.com.luizalabs.clientsapi.domain
 
 data class Client(
     val id: String?,

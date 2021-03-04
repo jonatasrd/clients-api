@@ -1,4 +1,4 @@
-package br.com.luizalabs.clients.domain.exception.model
+package br.com.luizalabs.clientsapi.domain.exception.model
 
 /**
  * MessageError Enum for errors

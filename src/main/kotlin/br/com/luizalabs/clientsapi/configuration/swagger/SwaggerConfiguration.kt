@@ -1,4 +1,4 @@
-package br.com.luizalabs.clients.configuration.swagger
+package br.com.luizalabs.clientsapi.configuration.swagger
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

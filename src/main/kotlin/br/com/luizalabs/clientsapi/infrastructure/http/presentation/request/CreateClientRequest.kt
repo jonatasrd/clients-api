@@ -1,6 +1,6 @@
-package br.com.luizalabs.clients.infrastructure.http.presentation.request
+package br.com.luizalabs.clientsapi.infrastructure.http.presentation.request
 
-import br.com.luizalabs.clients.domain.Client
+import br.com.luizalabs.clientsapi.domain.Client
 import io.swagger.annotations.ApiModelProperty
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotBlank

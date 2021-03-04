@@ -1,0 +1,20 @@
+spring:
+
+  application:
+    name: clients-api
+
+  profiles:
+    active: local
+
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: application/json
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+    org.springframework.security: DEBUG
+    root: INFO
+    br.com.luizalabs.clients: DEBUG

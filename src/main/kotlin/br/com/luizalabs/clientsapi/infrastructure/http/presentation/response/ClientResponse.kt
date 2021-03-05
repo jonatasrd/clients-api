@@ -15,7 +15,7 @@ data class ClientResponse(
 )
 
 /**
- * Convert [Client] to [ClientResponse].
+ * Convert [Client] to [ClientCreateResponse].
  */
 internal fun Client.toResponse() = ClientResponse(
     id = this.id!!,
@@ -25,6 +25,6 @@ internal fun Client.toResponse() = ClientResponse(
 )
 
 /**
- * Convert a list of [Client] to a List of [ClientResponse].
+ * Convert a list of [Client] to a List of [ClientCreateResponse].
  */
 internal fun List<Client>.toResponse() = this.map { it.toResponse() }

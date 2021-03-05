@@ -31,8 +31,16 @@ dependencies {
 	implementation("io.springfox:springfox-swagger-ui:2.9.2")
 	implementation("io.springfox:springfox-bean-validators:2.9.2")
 
-	/** tests **/
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	/** RabbitMQ **/
+	implementation("org.springframework.boot:spring-boot-starter-amqp")
+	implementation("org.springframework.boot:spring-boot-starter-aop")
+
+	/** test **/
+	testImplementation("org.springframework.boot:spring-boot-starter-test") {
+		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
+	}
+	testImplementation("org.springframework.security:spring-security-test")
+	testImplementation("com.ninja-squad:springmockk:2.0.0")
 
 }
 

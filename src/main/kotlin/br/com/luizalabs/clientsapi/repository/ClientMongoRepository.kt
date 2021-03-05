@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
 
 /**
- * Spring Data Repository for Context.
+ * Spring MongoRepository for ClientMongoModel.
  */
 @Repository
 interface ClientMongoRepository : MongoRepository<ClientMongoModel, String>

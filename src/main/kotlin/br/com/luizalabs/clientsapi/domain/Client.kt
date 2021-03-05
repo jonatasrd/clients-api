@@ -34,5 +34,6 @@ internal fun Client.toNewMongoModel() = ClientMongoModel(
 internal fun ClientMongoModel.toDomain() = Client(
     id = this._id,
     name = this.name,
-    email = this.email
+    email = this.email,
+    wishlist = this.wishlist
 )

@@ -22,7 +22,7 @@ data class CreateClientRequest(
         required = true,
         example = "jonatasrd@gmail.com"
     )
-    val email: String,
+    val email: String = "",
 
     @ApiModelProperty(
         value = "A set of products ids",

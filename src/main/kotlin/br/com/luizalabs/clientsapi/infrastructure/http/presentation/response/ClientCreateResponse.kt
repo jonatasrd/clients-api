@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiModel
 /**
  * Client payload response.
  */
-@ApiModel(value = "ClientResponse")
+@ApiModel(value = "ClientCreateResponse")
 data class ClientCreateResponse(
     val id: String,
     val name: String,

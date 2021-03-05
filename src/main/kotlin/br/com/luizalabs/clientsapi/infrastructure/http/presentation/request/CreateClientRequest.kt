@@ -22,14 +22,7 @@ data class CreateClientRequest(
         required = true,
         example = "jonatasrd@gmail.com"
     )
-    val email: String = "",
-
-    @ApiModelProperty(
-        value = "A set of products ids",
-        required = false,
-        example = "74535aba-7c82-11eb-9439-0242ac130002"
-    )
-    val wishlist: Set<String> = emptySet()
+    val email: String = ""
 )
 
 /**
@@ -38,5 +31,5 @@ data class CreateClientRequest(
 internal fun CreateClientRequest.toDomain() = Client(
     name = this.name.toUpperCase(),
     email = this.email,
-    wishlist = this.wishlist
+    wishlist = emptySet()
 )

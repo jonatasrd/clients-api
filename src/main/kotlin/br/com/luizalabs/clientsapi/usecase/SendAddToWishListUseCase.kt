@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service
 
 @Service
 class SendAddToWishListUseCase(
-    val publisherTo: AddToWishListPublisher
+    val publisher: AddToWishListPublisher
 ) {
 
-    fun execute(id: String, products: Set<String>) = publisherTo.publish(
+    fun execute(id: String, products: Set<String>) = publisher.publish(
         WishListMessage(id, products)
     )
 }

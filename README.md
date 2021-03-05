@@ -7,5 +7,5 @@ A API tem a finalidade de expor serviços para criar, editar, consultar, excluir
 ### Como rodar localmente
 
 * Pré-requisitos: Instalar o docker, docker-compose e configurar para execução sem sudo;
-* Se for a primeira vez, execute o comando `./gradlew setupLocalDb` para construir (com o docker) o ambiente o DB local;
-* Execute a script `./gradlew startLocalEnv`, que se encarregará de subir a docker do banco (restart), e executar a aplicação no profile default;
+* Execute o comando `docker-compose up -d` para construir (com o docker) o ambiente local;
+* Execute o comando `./gradlew bootRun`, para o start da aplicação (fazer isso após o comando acima);

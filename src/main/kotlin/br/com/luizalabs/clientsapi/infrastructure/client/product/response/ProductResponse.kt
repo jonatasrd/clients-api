@@ -6,5 +6,5 @@ data class ProductResponse(
     val price: Double,
     val brand: String,
     val image: String,
-    val reviewScore: Double?,
+    val reviewScore: Double?
 )

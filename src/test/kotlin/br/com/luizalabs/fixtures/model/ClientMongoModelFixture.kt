@@ -1,20 +1,20 @@
-package br.com.luizalabs.fixtures.domain
+package br.com.luizalabs.fixtures.model
 
-import br.com.luizalabs.clientsapi.domain.Client
+import br.com.luizalabs.clientsapi.repository.model.ClientMongoModel
 import br.com.luizalabs.fixtures.consts.ClientConsFixture
 
-open class ClientDomainFixture {
+class ClientMongoModelFixture {
 
     companion object {
 
-        fun defaultSaved() = Client(
-            id = ClientConsFixture.DEFAULT_ID,
+        fun default() = ClientMongoModel(
+            _id = ClientConsFixture.DEFAULT_ID,
             name = ClientConsFixture.DEFAULT_NAME,
             email = ClientConsFixture.DEFAULT_EMAIL
         )
 
-        fun toSave() = Client(
-            id = null,
+        fun toSave() = ClientMongoModel(
+            _id = null,
             name = ClientConsFixture.DEFAULT_NAME,
             email = ClientConsFixture.DEFAULT_EMAIL
         )

@@ -1,20 +1,14 @@
 package br.com.luizalabs.fixtures.domain
 
-import br.com.luizalabs.clientsapi.domain.Client
+import br.com.luizalabs.clientsapi.domain.EditClientMessage
 import br.com.luizalabs.fixtures.consts.ClientConsFixture
 
-open class ClientDomainFixture {
+class EditClientMessageFixture {
 
     companion object {
 
-        fun defaultSaved() = Client(
+        fun default() = EditClientMessage(
             id = ClientConsFixture.DEFAULT_ID,
-            name = ClientConsFixture.DEFAULT_NAME,
-            email = ClientConsFixture.DEFAULT_EMAIL
-        )
-
-        fun toSave() = Client(
-            id = null,
             name = ClientConsFixture.DEFAULT_NAME,
             email = ClientConsFixture.DEFAULT_EMAIL
         )

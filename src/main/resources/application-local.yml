@@ -2,6 +2,14 @@ spring:
   data:
     mongodb:
       uri: mongodb://clients_usr:clients_pwd@localhost:27017/admin
+      auto-index-creation: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    virtual-host: local
+    username: rabbitmq
+    password: rabbitmq
 
 management:
   endpoint:
@@ -10,3 +18,4 @@ management:
   endpoints:
     web:
       exposure.include: "*"
+

@@ -163,17 +163,20 @@ class ClientController(
      * @param request is a [CreateClientRequest]
      */
     @ApiOperation(value = "Add products to wishlist")
-    @PostMapping(
-        value = ["/{id}/wishlist"],
+    @PutMapping(
+        value = ["/{id}/wishlist/add"],
         consumes = [MediaType.APPLICATION_JSON_VALUE]
     )
     @ResponseStatus(HttpStatus.ACCEPTED)
-    fun addProduct(@RequestBody @NotEmpty request: Set<String>) {
-        logger.info("CONTROLLER BEGIN | client add product, request={}", request)
+    fun addToWishList(
+        @PathVariable(name = "id") id: String,
+        @RequestBody @NotEmpty request: Set<String>
+    ) {
+        logger.info("CONTROLLER BEGIN | client send add to wishlist product, request={}", request)
 
-        sendAddToWishListUseCase.execute(request)
+        sendAddToWishListUseCase.execute(id, request)
 
-        logger.info("CONTROLLER END | client add product")
+        logger.info("CONTROLLER END | client send add to wishlist product")
 
     }
 
@@ -183,17 +186,20 @@ class ClientController(
      * @param request is a [CreateClientRequest]
      */
     @ApiOperation(value = "Delete products from wishlist")
-    @DeleteMapping(
-        value = ["/{id}/wishlist"],
+    @PutMapping(
+        value = ["/{id}/wishlist/remove"],
         consumes = [MediaType.APPLICATION_JSON_VALUE]
     )
     @ResponseStatus(HttpStatus.ACCEPTED)
-    fun deleteProduct(@RequestBody @NotEmpty request: Set<String>) {
-        logger.info("CONTROLLER BEGIN | client delete product, request={}", request)
+    fun removedFromWishList(
+        @PathVariable(name = "id") id: String,
+        @RequestBody @NotEmpty request: Set<String>
+    ) {
+        logger.info("CONTROLLER BEGIN | client send remove from wishlist product, request={}", request)
 
-        sendRemoveFromWishListUseCase.execute(request)
+        sendRemoveFromWishListUseCase.execute(id, request)
 
-        logger.info("CONTROLLER END | client delete product")
+        logger.info("CONTROLLER END | client send remove from wishlist product")
 
     }
 

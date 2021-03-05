@@ -1,29 +1,23 @@
 package br.com.luizalabs.clientsapi.usecase
 
-import br.com.luizalabs.clientsapi.domain.exception.ResourceNotFoundException
 import br.com.luizalabs.clientsapi.repository.ClientMongoRepository
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 
 @Service
 class RemoveFromWishListUseCase(
-    val findClientByIdUseCase: FindClientByIdUseCase,
     val clientMongoRepository: ClientMongoRepository
 ) {
 
-    private val logger: Logger = LoggerFactory.getLogger(javaClass)
-
     fun execute(clientId: String, productsIds: Set<String>) {
-        try {
-            val client = findClientByIdUseCase.execute(clientId)
+        val result = clientMongoRepository.findById(clientId)
 
-            client.wishlist.removeAll(productsIds)
+        if (result.isPresent) {
 
-            clientMongoRepository.save(client)
+            val clientMongoModel = result.get()
 
-        } catch (error: ResourceNotFoundException) {
-            logger.info(error.message)
+            clientMongoModel.wishlist.removeAll(productsIds)
+
+            clientMongoRepository.save(clientMongoModel)
         }
     }
 }

@@ -1,7 +1,6 @@
 package br.com.luizalabs.clientsapi.infrastructure.http.routing
 
 import br.com.luizalabs.clientsapi.domain.Client
-import br.com.luizalabs.clientsapi.domain.toDomain
 import br.com.luizalabs.clientsapi.infrastructure.http.presentation.request.CreateClientRequest
 import br.com.luizalabs.clientsapi.infrastructure.http.presentation.request.EditClientRequest
 import br.com.luizalabs.clientsapi.infrastructure.http.presentation.request.toDomain
@@ -84,7 +83,7 @@ class ClientController(
     @ApiOperation(value = "List Clients")
     @GetMapping(produces = [MediaType.APPLICATION_JSON_VALUE])
     fun findClients(
-        @RequestParam(value = "page", defaultValue = "0") page: Int,
+        @RequestParam(value = "page", defaultValue = "0") page: Int
     ): List<Client> {
         logger.info("CONTROLLER BEGIN | find clients")
 
@@ -108,7 +107,7 @@ class ClientController(
     ): ClientResponse {
         logger.info("CONTROLLER BEGIN | find client by id")
 
-        val response = findClientByIdUseCase.execute(id).toDomain().toResponse()
+        val response = findClientByIdUseCase.execute(id).toResponse()
 
         logger.info("CONTROLLER END | find client by id")
 

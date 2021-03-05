@@ -17,6 +17,7 @@ private const val BASE_PACKAGE = "br.com.luizalabs.clients"
 @EnableSwagger2
 @Import(springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration::class)
 class SwaggerConfiguration {
+    
     @Bean
     fun swaggerClientsApi(): Docket {
         return Docket(DocumentationType.SWAGGER_2)
@@ -30,25 +31,6 @@ class SwaggerConfiguration {
                     .version("base-version")
                     .title("Clients API")
                     .description("Clients API documentation").build()
-            )
-    }
-
-    @Bean
-    fun swaggerBuildInfo(): Docket {
-        return Docket(DocumentationType.SWAGGER_2)
-            .groupName("build-info-api")
-            .select()
-            .apis(RequestHandlerSelectors.basePackage(BASE_PACKAGE))
-            .paths(PathSelectors.regex("/api/build-info"))
-            .build()
-            .apiInfo(
-                ApiInfoBuilder()
-                    .version("base-version")
-                    .title("Client API")
-                    .description(
-                        "Client API for keep products wishlist"
-                    )
-                    .build()
             )
     }
 }

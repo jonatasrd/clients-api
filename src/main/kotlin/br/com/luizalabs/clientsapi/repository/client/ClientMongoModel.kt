@@ -20,7 +20,7 @@ data class ClientMongoModel(
     val email: String,
 
     @Field("wishlist")
-    val wishlist: Set<String> = emptySet()
+    val wishlist: MutableSet<String> = mutableSetOf()
 
 ) {
 

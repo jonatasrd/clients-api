@@ -1,6 +1,6 @@
 package br.com.luizalabs.clientsapi.repository
 
-import br.com.luizalabs.clientsapi.repository.client.ClientMongoModel
+import br.com.luizalabs.clientsapi.repository.model.ClientMongoModel
 import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
 

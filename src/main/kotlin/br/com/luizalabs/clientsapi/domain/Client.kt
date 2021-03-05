@@ -1,6 +1,6 @@
 package br.com.luizalabs.clientsapi.domain
 
-import br.com.luizalabs.clientsapi.repository.client.ClientMongoModel
+import br.com.luizalabs.clientsapi.repository.model.ClientMongoModel
 
 data class Client(
     val id: String?,

@@ -40,5 +40,6 @@ data class ClientMongoModel(
 internal fun ClientMongoModel.toUpdate(editMessage: EditClientMessage) = ClientMongoModel(
     _id = this._id,
     name = editMessage.name ?: this.name,
-    email = editMessage.email ?: this.email
+    email = editMessage.email ?: this.email,
+    wishlist = this.wishlist
 )

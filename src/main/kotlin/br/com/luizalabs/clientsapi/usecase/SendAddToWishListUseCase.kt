@@ -9,5 +9,7 @@ class SendAddToWishListUseCase(
     val publisherTo: AddToWishListPublisher
 ) {
 
-    fun execute(products: Set<String>) = publisherTo.publish(WishListMessage(products))
+    fun execute(id: String, products: Set<String>) = publisherTo.publish(
+        WishListMessage(id, products)
+    )
 }

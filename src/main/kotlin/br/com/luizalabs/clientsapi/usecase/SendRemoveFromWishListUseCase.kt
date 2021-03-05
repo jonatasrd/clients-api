@@ -9,5 +9,7 @@ class SendRemoveFromWishListUseCase(
     val publisher: RemoveFromWishListPublisher
 ) {
 
-    fun execute(products: Set<String>) = publisher.publish(WishListMessage(products))
+    fun execute(id: String, products: Set<String>) = publisher.publish(
+        WishListMessage(id, products)
+    )
 }

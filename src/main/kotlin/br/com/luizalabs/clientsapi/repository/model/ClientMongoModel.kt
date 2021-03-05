@@ -1,4 +1,4 @@
-package br.com.luizalabs.clientsapi.repository.client
+package br.com.luizalabs.clientsapi.repository.model
 
 import br.com.luizalabs.clientsapi.domain.EditClientMessage
 import org.springframework.data.annotation.Id

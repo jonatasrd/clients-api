@@ -10,6 +10,7 @@ import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
 import io.mockk.verify
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -37,6 +38,23 @@ internal class GetValidProductsIdsUseCaseTest {
     }
 
     @Test
+    fun `Should call ProductApiClient for every product id`() {
+
+        every { productApi.findById(any()) } answers { ProductResponseFixture.default() }
+
+        getValidProductsIdsUseCase.execute(
+            setOf(
+                ClientConsFixture.DEFAULT_ID_PRODUCT,
+                ClientConsFixture.OTHER_ID_PRODUCT,
+                ClientConsFixture.ANY_ID_PRODUCT
+            )
+        )
+
+        verify(exactly = 3) { productApi.findById(any()) }
+
+    }
+
+    @Test
     fun `Should not throw exception if api returns 404`() {
 
         every { productApi.findById(any()) } throws TestFeignClientException(404, "test", byteArrayOf(1))
@@ -47,6 +65,17 @@ internal class GetValidProductsIdsUseCaseTest {
 
         verify(exactly = 1) { productApi.findById(any()) }
 
+    }
+
+    @Test
+    fun `Should throw Exception if api returns status code different from 404`() {
+
+        every { productApi.findById(any()) } throws TestFeignClientException(500, "test", byteArrayOf(1))
+
+
+        assertThrows(TestFeignClientException::class.java) {
+            getValidProductsIdsUseCase.execute(setOf(ClientConsFixture.DEFAULT_ID_PRODUCT))
+        }
     }
 
 }

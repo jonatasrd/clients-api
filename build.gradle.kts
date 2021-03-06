@@ -41,6 +41,7 @@ dependencies {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
     testImplementation("com.ninja-squad:springmockk:2.0.0")
+    testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
 
 }
 

@@ -2,12 +2,12 @@ version: '3.1'
 
 services:
   mongo:
-    image: mongo
-    container_name: clients_mongodb
-    restart: always
+    image: "mongo:bionic"
+    container_name: "clients_mongodb"
+    restart: "always"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: clients_usr
-      MONGO_INITDB_ROOT_PASSWORD: clients_pwd
+      MONGO_INITDB_ROOT_USERNAME: "clients_usr"
+      MONGO_INITDB_ROOT_PASSWORD: "clients_pwd"
     ports:
       - 27017:27017
     networks:
@@ -15,7 +15,7 @@ services:
 
   rabbitmq:
     build: "devops/docker/rabbitmq/"
-    container_name: "rabbitmq_clients"
+    container_name: "clients_rabbitmq"
     environment:
       RABBITMQ_DEFAULT_USER: "rabbitmq"
       RABBITMQ_DEFAULT_PASS: "rabbitmq"
@@ -25,8 +25,8 @@ services:
       - "15672:15672"
 
   keycloak:
-    image: jboss/keycloak:11.0.3
-    container_name: "keycloak"
+    image: "jboss/keycloak:11.0.3"
+    container_name: "clients_keycloak"
     environment:
       KEYCLOAK_USER: "admin"
       KEYCLOAK_PASSWORD: "admin"

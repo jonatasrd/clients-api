@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ad4a26dc-30db-4105-93a2-1f42a823d4f6",
+		"_postman_id": "907477b9-f800-45e5-9878-f15d53752598",
 		"name": "LuizaLabs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -41,7 +41,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\" : \"Jonatas Ramos Domingos\",\n    \"email\" : \"jnatasrd@gmail.com\"\n}",
+					"raw": "{\n    \"name\" : \"Jonatas Ramos Domingos\",\n    \"email\" : \"jonatasrd@gmail.com\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -49,7 +49,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/clients/dishuidfsdfd",
+					"raw": "http://localhost:8080/api/clients/6043ebba36efae02fbee392d",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -58,7 +58,7 @@
 					"path": [
 						"api",
 						"clients",
-						"dishuidfsdfd"
+						"6043ebba36efae02fbee392d"
 					]
 				}
 			},
@@ -79,7 +79,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/clients/604146dedceeaf7fee9d92d2/wishlist/add",
+					"raw": "http://localhost:8080/api/clients/6043ebba36efae02fbee392d/wishlist/add",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -88,7 +88,7 @@
 					"path": [
 						"api",
 						"clients",
-						"604146dedceeaf7fee9d92d2",
+						"6043ebba36efae02fbee392d",
 						"wishlist",
 						"add"
 					]
@@ -103,7 +103,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[\n    \"1bf0f365-fbdd-4e21-9786-da459d78dd1f\",\n    \"hshshshshs\",\n    \"f6c094e1-f27d-677b-4187-cf6a5acd03aa\",\n    \"dbaa0b7d-ddab-8bef-4715-bab2c42b5446\",\n    \"7be7243b-e938-fe5d-a71e-905fd7a9fbba\",\n    \"HUAHUHUAHUAHUA\",\n    \"1b3780e9-6fe4-8070-e485-9c28099b610b\",\n    \"761b4399-343c-955f-3296-911185441597\"\n]",
+					"raw": "[\n    \"1bf0f365-fbdd-4e21-9786-da459d78dd1f\",\n    \"hshshshshs\",\n    \"f6c094e1-f27d-677b-4187-cf6a5acd03aa\",\n    \"761b4399-343c-955f-3296-911185441597\"\n]",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -111,7 +111,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/clients/604146dedceeaf7fee9d92d2/wishlist/remove",
+					"raw": "http://localhost:8080/api/clients/6043ebba36efae02fbee392d/wishlist/remove",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -120,7 +120,7 @@
 					"path": [
 						"api",
 						"clients",
-						"604146dedceeaf7fee9d92d2",
+						"6043ebba36efae02fbee392d",
 						"wishlist",
 						"remove"
 					]
@@ -176,7 +176,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/clients/60416c90e444546c27acb224",
+					"raw": "http://localhost:8080/api/clients/6043ebba36efae02fbee392d",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -185,7 +185,7 @@
 					"path": [
 						"api",
 						"clients",
-						"60416c90e444546c27acb224"
+						"6043ebba36efae02fbee392d"
 					]
 				}
 			},
@@ -278,8 +278,8 @@
 					]
 				},
 				"url": {
-					"raw": "https://localhost:8180/auth/realms/Luizalabs/protocol/openid-connect/token",
-					"protocol": "https",
+					"raw": "http://localhost:8180/auth/realms/luizalabs/protocol/openid-connect/token",
+					"protocol": "http",
 					"host": [
 						"localhost"
 					],
@@ -287,7 +287,7 @@
 					"path": [
 						"auth",
 						"realms",
-						"Luizalabs",
+						"luizalabs",
 						"protocol",
 						"openid-connect",
 						"token"

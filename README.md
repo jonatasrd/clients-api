@@ -37,8 +37,12 @@ Dentro da pasta do projeto `clients-api` podem ser executados os seguintes coman
 * `./gradlew bootRun`, para o start da aplicação (obrigatoriamente ter executado com sucesso o comando acima);
 * `./gradlew test`, executa os testes;
 
-Com a aplicação rodando é hora de testar os endpoints. Para isso deve ser importado o arquivo `LuizaLabs.postman_collection.json`,
-que se encontra na raiz do projeto no [Postman](https://www.postman.com/downloads/). Existe um endpoint de Token que deve ser executado antes de fazer as chamadas
+Com a aplicação rodando é hora de testar os endpoints. 
+
+Para isso foi disponibilizado o arquivo `LuizaLabs.postman_collection.json`,
+que se encontra na raiz do projeto, e deve ser importado no [Postman](https://www.postman.com/downloads/). 
+
+Após feita a importação no Postman, você verá que existe um endpoint chamado `Get Token` que deve ser executado antes de fazer as chamadas
 para os endpoints (Após executado, ele armazenara o token e adicionará no headers dos endpoints como Bearer Token automaticamente). 
 ___
 

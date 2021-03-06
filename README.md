@@ -1,4 +1,4 @@
-# Client API
+# Clients API
 
 ---
 API com finalidade de expor serviços para criar, editar, consultar, excluir e atualizar a wishlist de clientes.

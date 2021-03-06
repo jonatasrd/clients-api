@@ -36,6 +36,11 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-amqp")
     implementation("org.springframework.boot:spring-boot-starter-aop")
 
+    /** security & keycloak **/
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.keycloak:keycloak-spring-boot-starter")
+    implementation("org.keycloak:keycloak-spring-boot-2-adapter")
+
     /** tests **/
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
@@ -48,6 +53,7 @@ dependencies {
 dependencyManagement {
     imports {
         mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+        mavenBom("org.keycloak.bom:keycloak-adapter-bom:11.0.3")
     }
 }
 

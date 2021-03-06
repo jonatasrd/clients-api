@@ -24,6 +24,18 @@ services:
       - "5672:5672"
       - "15672:15672"
 
+  keycloak:
+    image: jboss/keycloak:11.0.3
+    container_name: "keycloak"
+    environment:
+      KEYCLOAK_USER: "admin"
+      KEYCLOAK_PASSWORD: "admin"
+      KEYCLOAK_IMPORT: "/tmp/luizalabs.json -Dkeycloak.profile.feature.upload_scripts=enabled"
+    ports:
+      - "8180:8080"
+    volumes:
+      - "./devops/docker/keycloak/luizalabs.json:/tmp/luizalabs.json"
+
 networks:
   mongo-compose-network:
     driver: bridge

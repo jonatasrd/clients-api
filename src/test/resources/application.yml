@@ -1,0 +1,26 @@
+spring:
+
+  application:
+    name: clients-api
+
+  profiles:
+    active: local
+
+  autoconfigure:
+    exclude:
+      - org.keycloak.adapters.springboot.KeycloakAutoConfiguration
+      - org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+      - org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration
+
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: application/json
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: INFO
+    org.springframework.security: INFO
+    root: INFO
+    br.com.luizalabs.clients: DEBUG

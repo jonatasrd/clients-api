@@ -215,13 +215,12 @@ internal class ClientControllerTest(@Autowired val mvc: MockMvc) {
 
             every { sendUpdateClientUseCase.execute(any(), any()) } answers { nothing }
 
-            val result =
-                mvc.perform(
-                    MockMvcRequestBuilders.put(baseUriWithId, ClientConsFixture.DEFAULT_ID)
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(ClientRequestFixture.DEFAULT)
-                ).andExpect(MockMvcResultMatchers.status().isAccepted)
-                    .andReturn()
+            mvc.perform(
+                MockMvcRequestBuilders.put(baseUriWithId, ClientConsFixture.DEFAULT_ID)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content(ClientRequestFixture.DEFAULT)
+            ).andExpect(MockMvcResultMatchers.status().isAccepted)
+                .andReturn()
         }
 
         @Test

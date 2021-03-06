@@ -1,7 +1,7 @@
 # Clients API
 
 ---
-API com finalidade de expor serviços para criar, editar, consultar, excluir e atualizar a wishlist de clientes.
+API com finalidade de expor serviços para criar, editar, consultar, excluir clientes além de atualizar a wishlist dos mesmos.
 
 #### Solução técnica
     Foi desenvolvida em Kotlin utilizando MongoDb como base de dados, visando maior velocidade de resposta de leitura.

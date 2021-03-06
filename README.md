@@ -35,6 +35,7 @@ Dentro da pasta do projeto `clients-api` podem ser executados os seguintes coman
 * `docker-compose up -d` para construir o ambiente local;
     * `docker ps` para verificar se existem os seguintes containers rodando: `clients_mongodb`, `clients_rabbitmq` e `clients_keycloak`;
 * `./gradlew bootRun`, para o start da aplicação (obrigatoriamente ter executado com sucesso o comando acima);
+* `./gradlew tests`, executa os testes;
 
 Com a aplicação rodando é hora de testar os endpoints. Para isso deve ser importado o arquivo `LuizaLabs.postman_collection.json`,
 que se encontra na raiz do projeto no [Postman](https://www.postman.com/downloads/). Existe um endpoint de Token que deve ser executado antes de fazer as chamadas

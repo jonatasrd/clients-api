@@ -22,3 +22,15 @@ management:
 endpoints:
   productApi:
     uri: http://challenge-api.luizalabs.com
+
+keycloak:
+  realm: luizalabs
+  auth-server-url: http://localhost:8180/auth/
+  ssl-required: external
+  resource: clientsapi
+  verify-token-audience: false
+  credentials:
+    secret: 75b20bb3-80ca-427e-9d44-3efbce9a8b76
+  use-resource-role-mappings: true
+  bearer-only: true
+  principal-attribute: preferred_username

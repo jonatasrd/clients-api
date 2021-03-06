@@ -6,7 +6,7 @@ data class UpdateClient(
 )
 
 /**
- * Convert [UpdateClient] domain to [Client]
+ * Convert [UpdateClient] domain to [EditClientMessage]
  */
 internal fun UpdateClient.toMessage(id: String) = EditClientMessage(
     id = id,

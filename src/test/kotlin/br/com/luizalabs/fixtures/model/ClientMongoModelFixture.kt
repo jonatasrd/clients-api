@@ -13,6 +13,13 @@ class ClientMongoModelFixture {
             email = ClientConsFixture.DEFAULT_EMAIL
         )
 
+        fun full() = ClientMongoModel(
+            _id = ClientConsFixture.DEFAULT_ID,
+            name = ClientConsFixture.DEFAULT_NAME,
+            email = ClientConsFixture.DEFAULT_EMAIL,
+            wishlist = mutableSetOf(ClientConsFixture.DEFAULT_ID_PRODUCT)
+        )
+
         fun withSameId() = ClientMongoModel(
             _id = ClientConsFixture.DEFAULT_ID,
             name = ClientConsFixture.OTHER_NAME,

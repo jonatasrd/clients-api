@@ -36,5 +36,6 @@ internal class ClientResponseTest {
         assertEquals(ClientConsFixture.DEFAULT_NAME, response.first().name)
         assertEquals(ClientConsFixture.DEFAULT_EMAIL, response.first().email)
         assertEquals(ClientConsFixture.DEFAULT_ID_PRODUCT, response.first().wishlist.first())
+        assertEquals(1, response.first().wishlist.size)
     }
 }

@@ -16,7 +16,13 @@ open class ClientDomainFixture {
         fun toSave() = Client(
             id = null,
             name = ClientConsFixture.DEFAULT_NAME,
-            email = ClientConsFixture.DEFAULT_EMAIL
+            email = ClientConsFixture.OTHER_EMAIL
+        )
+
+        fun saved() = Client(
+            id = ClientConsFixture.OTHER_ID,
+            name = ClientConsFixture.DEFAULT_NAME,
+            email = ClientConsFixture.OTHER_EMAIL
         )
     }
 }

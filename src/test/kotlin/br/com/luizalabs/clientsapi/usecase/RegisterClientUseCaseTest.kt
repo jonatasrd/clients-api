@@ -28,11 +28,11 @@ internal class RegisterClientUseCaseTest {
     @Test
     fun `Should register a client`() {
 
-        every { clientMongoRepository.save(ClientMongoModelFixture.toSave()) } answers { ClientMongoModelFixture.default() }
+        every { clientMongoRepository.save(ClientMongoModelFixture.toSave()) } answers { ClientMongoModelFixture.saved() }
 
         val result = registerClientUseCase.execute(ClientDomainFixture.toSave())
 
-        assertEquals(ClientDomainFixture.defaultSaved(), result)
+        assertEquals(ClientDomainFixture.saved(), result)
 
         verify(exactly = 1) { clientMongoRepository.save(ClientMongoModelFixture.toSave()) }
 

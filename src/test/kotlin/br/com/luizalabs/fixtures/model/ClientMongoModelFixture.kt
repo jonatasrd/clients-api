@@ -32,5 +32,11 @@ class ClientMongoModelFixture {
             name = ClientConsFixture.DEFAULT_NAME,
             email = ClientConsFixture.OTHER_EMAIL
         )
+
+        fun saved() = ClientMongoModel(
+            _id = ClientConsFixture.OTHER_ID,
+            name = ClientConsFixture.DEFAULT_NAME,
+            email = ClientConsFixture.OTHER_EMAIL
+        )
     }
 }

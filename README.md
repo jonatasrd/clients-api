@@ -37,7 +37,7 @@ Dentro da pasta do projeto `clients-api` podem ser executados os seguintes coman
 * `./gradlew bootRun`, para o start da aplicação (obrigatoriamente ter executado com sucesso o comando acima);
 * `./gradlew test`, executa os testes;
 
-Com a aplicação rodando é hora de testar os endpoints. 
+Com a aplicação rodando é hora de testar os endpoints, você pode acessar a documentação dos endpoints no [Swagger](http://localhost:8080/swagger-ui.html). 
 
 Para isso foi disponibilizado o arquivo `LuizaLabs.postman_collection.json`,
 que se encontra na raiz do projeto, e deve ser importado no [Postman](https://www.postman.com/downloads/). 

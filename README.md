@@ -43,7 +43,7 @@ Para isso foi disponibilizado o arquivo `LuizaLabs.postman_collection.json`,
 que se encontra na raiz do projeto, e deve ser importado no [Postman](https://www.postman.com/downloads/). 
 
 Após feita a importação no Postman, você verá que existe um endpoint chamado `Get Token` que deve ser executado antes de fazer as chamadas
-para os endpoints (Após executado, ele armazenara o token e adicionará no headers dos endpoints como Bearer Token automaticamente). 
+para os endpoints. Após executado, ele armazenara o `access_token` e adicionará nos headers dos endpoints como Bearer Token automaticamente através de uma variável (isso funciona no Postman versão 8 para macbook). Caso o token não seja setado automaticamente, setar na mão como Bearer no header das chamadas.
 ___
 
 ### Urls disponíveis
